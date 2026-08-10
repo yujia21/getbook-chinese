@@ -1,0 +1,29 @@
+[project]
+name = "getbook-chinese"
+version = "0.2"
+description = "Extra parsers of Chinese websites for getbook."
+authors = [{ name = "Hsiaoming Yang", email = "me@lepture.com" }]
+license = { text = "GNU AGPLv3+" }
+readme = "README.rst"
+requires-python = ">=3.14"
+dependencies = [
+    "getbook",
+    "setuptools>=84.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/lepture/getbook-chinese"
+
+[project.entry-points."getbook.parsers"]
+kanunu = "getbook_chinese.kanunu:KanunuParser"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.16.2",
+]
+
+

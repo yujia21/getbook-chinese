@@ -12,17 +12,26 @@ Chinese websites parsers for getbook_.
 Installation
 ------------
 
-Install with pip::
+Install with uv::
+
+    $ uv add getbook-chinese
+
+Or with pip::
 
     $ pip install getbook-chinese
 
 Usage
 -----
 
+Pass the book's index page URL to ``getbook`` with the ``-u`` flag.
+
 Create EPUB book::
 
-    $ getbook -u https://www.kanunu8.com/wuxia/201102/1606.html
+    $ uv run getbook -u https://www.kanunu8.com/book6/xajianghu/
 
 Create MOBI book::
 
-    $ getbook --mobi -u https://www.kanunu8.com/wuxia/201102/1606.html
+    $ uv run getbook --mobi -u https://www.kanunu8.com/book6/xajianghu/
+
+The tool will fetch the chapter list from the index page and download
+each chapter automatically, then package them into the chosen format.
